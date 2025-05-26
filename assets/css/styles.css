@@ -17,7 +17,7 @@
     --character-top-image-color: #fff;
     --character-bottom-image-scr: url(../images/characters/inverted-world-monster.svg);
     --character-bottom-image-color: #e5e5e5;
-    --background-lamp-image: url(../images/backgrounds/lamp.svg);
+    --background-lamp-image: url(../images/backgrounds/lamps.png);
     --footer-background-color: #b5bbbf;
 }
 
@@ -30,8 +30,17 @@
     --character-top-image-color: rgba(255, 255, 255, 0.1);
     --character-bottom-image-scr: url(../images/characters/inverted-world-monster.svg);
     --character-bottom-image-color: #000;
-    --background-lamp-image: url(../images/backgrounds/lamp.svg);
+    --background-lamp-image: url(../images/backgrounds/lamps.png);
     --footer-background-color: #000;
+
+}
+.dark-theme button, .dark-theme  h1, .dark-theme h2, .dark-theme h3 {
+   letter-spacing: 5px;
+   font-weight: normal;
+}
+
+.dark-theme invert-element{
+    transform: rotateZ(180deg) scaleX(-1);
 }
 
 * {
@@ -70,7 +79,7 @@ button {
 }
 
 input,
-textarea{
+textarea {
     border: 2px solid var(--primary-color);
     background-color: var(--field-background-color);
     color: var(--primary-color-contrast);
@@ -79,13 +88,16 @@ textarea{
     font-size: 1rem;
 }
 
-label{
+label {
     margin-bottom: 8px;
 }
-input:focus-visible,textarea:focus-visible{
+
+input:focus-visible,
+textarea:focus-visible {
     outline: none;
     border-color: black;
 }
+
 header {
     background-color: var(--header-background-color);
     min-height: 850px;
@@ -176,6 +188,16 @@ main {
     align-items: center;
 }
 
+main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--page-background) no-repeat, url("../images/backgrounds/florest.png") no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
 section {
     display: flex;
     justify-content: space-between;
@@ -223,7 +245,8 @@ section {
     background-image: var(--background-lamp-image);
     background-position: 120%;
     background-size: 50%;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 
 #section-stranger-things-gallery .container {
@@ -255,18 +278,18 @@ section {
     border: 10px solid var(--hightlight-color);
 }
 
-#section-form{
+#section-form {
     flex-direction: column;
     align-items: center;
     gap: 40px;
     text-align: center;
 }
 
-#section-form h2{
+#section-form h2 {
     width: 600px;
 }
 
-#section-form .form-content h3{
+#section-form .form-content h3 {
     color: var(--hightlight-color);
     flex-basis: 30%;
     text-align: left;
@@ -274,22 +297,22 @@ section {
 
 }
 
-#section-form .form-content h3 span{
+#section-form .form-content h3 span {
     color: var(--primary-color);
 }
 
-#section-form .form-content{
-display: flex;
-justify-content: space-between;
-align-items: center;
+#section-form .form-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#section-form .form-container{
+#section-form .form-container {
     flex-basis: 50%;
     position: relative;
 }
 
-#section-form .form-container::after{
+#section-form .form-container::after {
     content: "";
     background-color: var(--hightlight-color);
     width: 100%;
@@ -300,7 +323,7 @@ align-items: center;
     z-index: -1;
 }
 
-#section-form .form-container form{
+#section-form .form-container form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -318,9 +341,42 @@ align-items: center;
     align-self: center;
 }
 
-#section-form .form-container form button:hover{
+#section-form .form-container form button:hover {
     background-color: var(--primary-color);
     color: var(--field-background-color);
 
-} 
+}
+
+footer{
+    padding: 60px 0;
+    background-color: var(--footer-background-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p{
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+footer::before, footer:after{
+    content: "";
+    width: 300px;
+    height: 200px;
+}
+
+footer::before{
+    left: -50px;
+    transform: rotateZ(-10deg);
+}
+
+footer:after{
+        left: -50px;
+    transform: rotateZ(10deg);
+}
+
 /*****CONTINUAR PELO VIDEO ESTILIZANDO AS DEMAIS SECOES DA PAGINA***/
