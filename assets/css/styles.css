@@ -22,7 +22,7 @@
 }
 
 .dark-theme {
-    --primary-color: linear-gradient(180deg, #050000 0%, #130404 65%, rgba(19, -1, -1, -0.75) 100%);
+    --primary-color: #cc2f2f;
     --header-background-color: #220f0f;
     --hightlight-color: #fff;
     --featured-font-family: 'Rubik Glitch', sans-serif;
@@ -32,14 +32,17 @@
     --character-bottom-image-color: #000;
     --background-lamp-image: url(../images/backgrounds/lamps.png);
     --footer-background-color: #000;
-
-}
-.dark-theme button, .dark-theme  h1, .dark-theme h2, .dark-theme h3 {
-   letter-spacing: 5px;
-   font-weight: normal;
 }
 
-.dark-theme invert-element{
+.dark-theme button,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+    letter-spacing: 5px;
+    font-weight: normal;
+}
+
+.dark-theme invert-element {
     transform: rotateZ(180deg) scaleX(-1);
 }
 
@@ -56,7 +59,6 @@ h3 {
     color: var(--primary-color);
     text-transform: uppercase;
     margin-bottom: 40px;
-
 }
 
 p,
@@ -67,8 +69,8 @@ label {
 }
 
 button {
-    padding: 16px 32px;
     /*espaçamento interno*/
+    padding: 16px 32px;
     background-color: transparent;
     font-weight: 900;
     font-family: var(--featured-font-family);
@@ -101,7 +103,7 @@ textarea:focus-visible {
 header {
     background-color: var(--header-background-color);
     min-height: 850px;
-    /*por padrao colcoa um do lado do outro*/
+    /*por padrao coloca um do lado do outro*/
     display: flex;
     /*coloca um embaixo do outro*/
     flex-direction: column;
@@ -123,8 +125,6 @@ header::before {
     filter: saturate(0);
     /*deixa a imagem com filtro de preto e branco*/
     opacity: 0.2;
-
-
 }
 
 .header-content {
@@ -166,7 +166,6 @@ header::before {
     bottom: 3px;
     mask: var(--character-top-image-scr) bottom/100% no-repeat;
     --webkit-mask: var(--character-top-image-scr) bottom/100% no-repeat;
-
 }
 
 #bottom-characters {
@@ -344,10 +343,9 @@ section {
 #section-form .form-container form button:hover {
     background-color: var(--primary-color);
     color: var(--field-background-color);
-
 }
 
-footer{
+footer {
     padding: 60px 0;
     background-color: var(--footer-background-color);
     text-align: center;
@@ -358,25 +356,24 @@ footer{
     overflow: hidden;
 }
 
-footer p{
+footer p {
     max-width: 700px;
     margin-bottom: 24px;
 }
 
-footer::before, footer:after{
+footer::before,
+footer:after {
     content: "";
     width: 300px;
     height: 200px;
 }
 
-footer::before{
+footer::before {
     left: -50px;
     transform: rotateZ(-10deg);
 }
 
-footer:after{
-        left: -50px;
+footer:after {
+    left: -50px;
     transform: rotateZ(10deg);
 }
-
-/*****CONTINUAR PELO VIDEO ESTILIZANDO AS DEMAIS SECOES DA PAGINA***/
